@@ -2,11 +2,13 @@ import dash
 from dash import html
 import dash_bootstrap_components as dbc
 
+from frontend.titulo.titulo import titulo
+
 layout = dbc.Container([
     dbc.Row([
-        dbc.Col('ENSAYO CORTE DIRECTO',md=12,style={'background-color':'orange'}),
-        dbc.Col('Descripción',md=12,style={'background-color':'white'}),
-        dbc.Col('Datos',md=6,style={'background-color':'yellow'}),
-        dbc.Col('Resultados',md=6,style={'background-color':'blue'}),
+        dbc.Col('titulo',md=12,style={'background-color':'orange'}),
+        dbc.Col('descripcion',md=12,style={'background-color':'white'}),
+        dbc.Col('entradadatos',md=6,style={'background-color':'yellow'}),
+        dbc.Col('salidadatos',md=6,style={'background-color':'blue'}),
     ])
 ])
