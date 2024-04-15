@@ -4,17 +4,17 @@ import dash_bootstrap_components as dbc
 
 caracteristicas=dbc.Container([
     html.H1("Características de la muestra"),
-    html.Br(),
+    html.Br(),html.Br(),
     html.Button('Diametro'),
-    html.Br(),
+    html.Br(),html.Br(),
     html.Button('Altura')
 ])
 
 Datos_de_corte=dbc.Container([
     html.H1("Datos de corte"),
-    html.Br(),
+    html.Br(),html.Br(),
     html.Button('Sobre carga'),
-    html.Br(),
+    html.Br(),html.Br(),
     html.Button('Carga nominal')
 ])
 
