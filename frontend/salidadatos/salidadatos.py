@@ -2,6 +2,21 @@ import dash
 from dash import html
 import dash_bootstrap_components as dbc
 
+parametros=dbc.Container([
+    html.H1("Parámetros del suelo"),
+    html.Br(),html.Br(),
+    html.Button('Cohesión máxima'),
+    html.Br(),html.Br(),
+    html.Button('Cohesión residual'),
+    html.Br(),html.Br(),
+    html.Button('Fricción máxima'),
+    html.Br(),html.Br(),
+    html.Button('Fricción residual')
+])
+
+
+
+
 salida_datos = dbc.Container([
     dbc.Row([
         dbc.Col('Curvas - Deformación horizontal',md=12,style={'background-color':'yellow'}), 
