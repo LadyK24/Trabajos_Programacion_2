@@ -6,5 +6,6 @@ titulo = dbc.Container([
     dbc.Row([
         dbc.Col('ENSAYO CORTE DIRECTO',md=12,style={'background-color':'orange'}),
         dbc.Col('INV E 154 13',md=12,style={'background-color':'orange'}),
+        html.Br(),html.Br()
     ])
 ])
