@@ -2,6 +2,12 @@ import dash
 from dash import html
 import dash_bootstrap_components as dbc
 
+resultados=dbc.Container([
+    html.H2("Curvas - Deformación horizontal"),
+    html.Br(),html.Br(),
+])
+
+
 parametros=dbc.Container([
     html.H1("Parámetros del suelo"),
     html.Br(),html.Br(),
@@ -19,7 +25,7 @@ parametros=dbc.Container([
 
 salida_datos = dbc.Container([
     dbc.Row([
-        dbc.Col('Curvas - Deformación horizontal',md=12,style={'background-color':'yellow'}), 
+        dbc.Col(resultados,md=12,style={'background-color':'yellow'}), 
         dbc.Col('Tabla - Deformaciones y esfuerzo',md=6,style={'background-color':'orange'}),
         dbc.Col('Gráfica',md=6,style={'background-color':'gray'}),
         dbc.Col('Esfuerzos normales y',md=6,style={'background-color':'green'}),
