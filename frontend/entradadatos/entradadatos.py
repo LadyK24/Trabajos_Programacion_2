@@ -3,7 +3,7 @@ from dash import Dash, dcc, html, Input, Output, callback, dash_table
 import dash_bootstrap_components as dbc
 import pandas as pd
 
-from backend.cortedirecto import corte_directo
+from backend1.cortedirecto import cortedirecto
 
 
 ingresodatos=dbc.Container([
@@ -29,21 +29,20 @@ Datos_de_corte=dbc.Container([
 
 
 tabla_datos=dbc.Container([
-    html.H3("Igrese sus datos en deformación y fueza"),
+    html.H1("Realización de tablas"),
     dash_table.DataTable(
-        id= 'tabla_corte_directo',
+        id='tabla_granulometria',
         columns=[
-            {'name':'Deformación (mm)','id':'Deformación','editable':False},
-            {'name':'Muestra 1. Fuerza cortante (N)','id':'Muestra_1_fuerza_cortante','editable':True},
-            {'name':'Muestra 2. Fuerza cortante (N)','id':'Muestra_2_fuerza_cortante','editable':True},
-            {'name':'Muestra 3. Fuerza cortante (N)','id':'Muestra_3_fuerza_cortante','editable':True},
-            {'name':'Muestra 1. Esfuerzo cortante (Mpa)','id':'Muestra_1_essfuerzo_cortante','editable':False},
-            {'name':'Muestra 1. Esfuerzo cortante (Mpa)','id':'Muestra_1_essfuerzo_cortante','editable':False},
-            {'name':'Muestra 1. Esfuerzo cortante (Mpa)','id':'Muestra_1_essfuerzo_cortante','editable':False},
+            {'name': 'Deformacion', 'id': 'Deformacion','editable': False},
+            {'name': 'Fuerza1', 'id': 'Fuerza1','editable': True},
+            {'name': 'Fuerza2', 'id': 'Fuerza2', 'editable': True},
+            {'name': 'Fuerza3', 'id': 'Fuerza3', 'editable': True},
+            {'name': 'Esfuerzo1', 'id': 'Esfuerzo1', 'editable': False},
+            {'name': 'Esfuerzo2', 'id': 'Esferzo2', 'editable': False},
+            {'name': 'Esfuerzo3', 'id': 'Esfuerzo3', 'editable': False}
             ],
-         data = corte_directo.to_dict('records')
-    )
-
+        data=cortedirecto.to_dict('records')           
+    ),
 ])
 
 
