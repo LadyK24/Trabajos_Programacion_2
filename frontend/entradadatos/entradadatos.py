@@ -1,6 +1,9 @@
 import dash
 from dash import Dash, dcc, html, Input, Output, callback, dash_table
 import dash_bootstrap_components as dbc
+import pandas as pd
+
+from backend.tablacortedirecto import corte_directo
 
 ingresodatos=dbc.Container([
     html.H2("Características de la muestra"),
@@ -36,9 +39,8 @@ tabla_datos=dbc.Container([
             {'name':'Muestra 1. Esfuerzo cortante (Mpa)','id':'Muestra_1_essfuerzo_cortante','editable':False},
             {'name':'Muestra 1. Esfuerzo cortante (Mpa)','id':'Muestra_1_essfuerzo_cortante','editable':False},
             {'name':'Muestra 1. Esfuerzo cortante (Mpa)','id':'Muestra_1_essfuerzo_cortante','editable':False},
-
-        ],
-        #data=
+            ],
+        data = corte_directo.to_dict('records')
     )
 
 ])
@@ -46,7 +48,7 @@ tabla_datos=dbc.Container([
 
 entrada_datos = dbc.Container([
     dbc.Row([
-        dbc.Col(ingresodatos,md=12,style={'background-color':'yellow'}), 
+        dbc.Col('ingresodatos',md=12,style={'background-color':'yellow'}), 
         dbc.Col(caracteristicas,md=6,style={'background-color':'orange'}),
         dbc.Col(Datos_de_corte,md=6,style={'background-color':'gray'}),
         dbc.Col(tabla_datos,md=12,style={'background-color':'green'}),

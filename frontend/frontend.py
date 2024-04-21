@@ -7,6 +7,9 @@ from frontend.descripción.descripción import descripcion
 from frontend.entradadatos.entradadatos import entrada_datos
 from frontend.salidadatos.salidadatos import salida_datos
 
+
+from backend.tablacortedirecto import corte_directo
+
 layout = dbc.Container([
     dbc.Row([
         dbc.Col(titulo,md=12,style={'background-color':'orange'}),
