@@ -3,7 +3,8 @@ from dash import Dash, dcc, html, Input, Output, callback, dash_table
 import dash_bootstrap_components as dbc
 import pandas as pd
 
-from backend.tablacortedirecto import corte_directo
+from backend1.cortedirecto import corte_directo
+
 
 ingresodatos=dbc.Container([
     html.H2("Características de la muestra"),
@@ -40,7 +41,7 @@ tabla_datos=dbc.Container([
             {'name':'Muestra 1. Esfuerzo cortante (Mpa)','id':'Muestra_1_essfuerzo_cortante','editable':False},
             {'name':'Muestra 1. Esfuerzo cortante (Mpa)','id':'Muestra_1_essfuerzo_cortante','editable':False},
             ],
-        data = corte_directo.to_dict('records')
+         data = corte_directo.to_dict('records')
     )
 
 ])

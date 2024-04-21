@@ -6,7 +6,6 @@ import pandas as pd
 
 #importar el frontend
 from frontend.frontend import layout
-from backend.tablacortedirecto import corte_directo
 
 
 
