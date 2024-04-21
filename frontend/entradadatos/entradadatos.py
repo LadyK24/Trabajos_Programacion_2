@@ -3,11 +3,9 @@ from dash import Dash, dcc, html, Input, Output, callback, dash_table
 import dash_bootstrap_components as dbc
 import pandas as pd
 
-<<<<<<< HEAD
 from backend1.cortedirecto import cortedirecto
-=======
-from backend.cortedirecto import cortedirecto
->>>>>>> 285d903efb60979e00ddeed788b73fcb4d0cdc0c
+
+
 
 
 ingresodatos=dbc.Container([
@@ -45,14 +43,10 @@ tabla_datos=dbc.Container([
             {'name': 'Esfuerzo2', 'id': 'Esferzo2', 'editable': False},
             {'name': 'Esfuerzo3', 'id': 'Esfuerzo3', 'editable': False}
             ],
-<<<<<<< HEAD
+
         data=cortedirecto.to_dict('records')           
     ),
-=======
          data = cortedirecto.to_dict('records')
-    )
-
->>>>>>> 285d903efb60979e00ddeed788b73fcb4d0cdc0c
 ])
 
 
