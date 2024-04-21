@@ -4,6 +4,7 @@ import dash_bootstrap_components as dbc
 
 corte_directo = dbc.Container([
     html.H1("ENSAYO CORTE DIRECTO")
+    
 ])
 subt = dbc.Container([
     html.H1("INV E 154 - 13")
