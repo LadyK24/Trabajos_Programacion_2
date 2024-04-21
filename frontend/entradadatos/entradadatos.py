@@ -29,7 +29,14 @@ tabla_datos=dbc.Container([
     dash_table.DataTable(
         id= 'tabla_corte_directo',
         columns=[
-            {'name':'Deformación','id':'Deformación','editable':False},
+            {'name':'Deformación (mm)','id':'Deformación','editable':False},
+            {'name':'Muestra 1. Fuerza cortante (N)','id':'Muestra_1_fuerza_cortante','editable':True},
+            {'name':'Muestra 2. Fuerza cortante (N)','id':'Muestra_2_fuerza_cortante','editable':True},
+            {'name':'Muestra 3. Fuerza cortante (N)','id':'Muestra_3_fuerza_cortante','editable':True},
+            {'name':'Muestra 1. Esfuerzo cortante (Mpa)','id':'Muestra_1_essfuerzo_cortante','editable':False},
+            {'name':'Muestra 1. Esfuerzo cortante (Mpa)','id':'Muestra_1_essfuerzo_cortante','editable':False},
+            {'name':'Muestra 1. Esfuerzo cortante (Mpa)','id':'Muestra_1_essfuerzo_cortante','editable':False},
+
         ],
         #data=
     )
