@@ -6,11 +6,9 @@ import pandas as pd
 from backend1.cortedirecto import cortedirecto
 
 
-
-
 ingresodatos=dbc.Container([
-    html.H2("Características de la muestra"),
-    html.Br(),html.Br(),
+    html.H4("Características de la muestra"),
+    html.Br(),
 ])
 
 caracteristicas=dbc.Container([
@@ -51,7 +49,7 @@ tabla_datos=dbc.Container([
 
 entrada_datos = dbc.Container([
     dbc.Row([
-        dbc.Col('ingresodatos',md=12,style={'background-color':'yellow'}), 
+        dbc.Col(ingresodatos,md=12,style={'background-color':'yellow'}), 
         dbc.Col(caracteristicas,md=6,style={'background-color':'orange'}),
         dbc.Col(Datos_de_corte,md=6,style={'background-color':'gray'}),
         dbc.Col(tabla_datos,md=12,style={'background-color':'green'}),
