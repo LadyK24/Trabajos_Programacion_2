@@ -108,7 +108,7 @@ Muestra_2_fuerza_cortante=[
     500
 ]
 
-corte_directo = pd.DataFrame({
+cortedirecto = pd.DataFrame({
     "Deformación (mm)": Deformación,
     "Muestra 2. Fuerza cortante (N)": Muestra_1_fuerza_cortante,
     "Muestra 1. Fuerza cortante (N)": Muestra_2_fuerza_cortante
