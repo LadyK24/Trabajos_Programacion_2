@@ -1,10 +1,12 @@
 import dash
 from dash import Dash, dcc, html, Input, Output, callback, dash_table
 import dash_bootstrap_components as dbc
+import pandas as pd
 
 
 #importar el frontend
 from frontend.frontend import layout
+from backend.corte_directo import corte_directo
 
 app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
 
