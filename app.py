@@ -6,6 +6,7 @@ import pandas as pd
 
 #importar el frontend
 from frontend.frontend import layout
+
 from backend1.cortedirecto import cortedirecto
 
 
