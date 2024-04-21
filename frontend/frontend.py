@@ -10,9 +10,6 @@ from frontend.entradadatos.entradadatos import entrada_datos
 from frontend.salidadatos.salidadatos import salida_datos
 
 
-from backend1.cortedirecto import corte_directo
-
-
 layout = dbc.Container([
     dbc.Row([
         dbc.Col(titulo,md=12,style={'background-color':'orange'}),

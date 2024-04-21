@@ -7,7 +7,7 @@ import pandas as pd
 #importar el frontend
 from frontend.frontend import layout
 
-
+from backend1.cortedirecto import corte_directo
 
 app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
 
