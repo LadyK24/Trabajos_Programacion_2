@@ -46,7 +46,6 @@ tabla_datos=dbc.Container([
 
         data=cortedirecto.to_dict('records')           
     ),
-         data = cortedirecto.to_dict('records')
 ])
 
 
