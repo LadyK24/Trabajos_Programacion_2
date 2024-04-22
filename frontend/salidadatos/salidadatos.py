@@ -36,10 +36,15 @@ parametros=dbc.Container([
         dcc.Input(type='number', value=5, id="Cohesión máxima")
     ]),
     html.Br(),html.Br(),
+
     html.Button('Cohesión residual'),
+
     html.Br(),html.Br(),
+
     html.Button('Fricción máxima'),
+
     html.Br(),html.Br(),
+    
     html.Button('Fricción residual')
 ])
 
