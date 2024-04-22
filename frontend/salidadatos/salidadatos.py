@@ -12,7 +12,7 @@ resultados=dbc.Container([
 
 
 esfuerzos_tabla=dbc.Container([
-    html.H6("Resultados de los esfuerzo de las muestras"),
+    html.H5("Resultados de los esfuerzo de las muestras"),
     dash_table.DataTable(
         id='esfuerzos_tabla',
         columns=[
@@ -32,17 +32,11 @@ parametros=dbc.Container([
     html.Br(),
 
     html.Button('Cohesión máxima'),
-    
     html.Br(),html.Br(),
-
     html.Button('Cohesión residual'),
-
     html.Br(),html.Br(),
-
     html.Button('Fricción máxima'),
-
     html.Br(),html.Br(),
-
     html.Button('Fricción residual')
 ])
 
@@ -58,6 +52,7 @@ salida_datos = dbc.Container([
         html.Br(),html.Br(),html.Br(),
         dbc.Col('Gráfica',md=6,style={'background-color':'#DCDCDC'}),
         dbc.Col(parametros,md=12,style={'background-color':'#DCDCDC'}),
+
 
     ])
 ])

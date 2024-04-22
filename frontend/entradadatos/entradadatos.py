@@ -11,6 +11,7 @@ ingresodatos=dbc.Container([
 ])
 
 caracteristicas=dbc.Container([
+    html.Br(),
     html.H6("Características de la muestra:"),
     
     html.Div([
@@ -25,6 +26,7 @@ caracteristicas=dbc.Container([
 ])
 
 Datos_de_corte=dbc.Container([
+    html.Br(),
     html.H6("Datos de corte:"),
     html.Div([
         html.Label('Sobre carga (g):', style={'display': 'inline-block', 'margin-right': '2px'}),

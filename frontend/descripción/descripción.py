@@ -3,8 +3,9 @@ from dash import html
 import dash_bootstrap_components as dbc
 
 ensayo=dbc.Container([
-    html.H5("Descripción: Determinar la resitencia al corte de una muetra de suelo consolidado y drenado...")
-
+    html.Br(),
+    html.H5("Descripción: tiene como objetivo principal determinar la resistencia al corte de materiales granulares, lo que proporciona información crucial para el diseño y la construcción de estructuras de ingeniería, como carreteras"),
+    html.Br()
 ])
 
 descripcion = dbc.Container([
