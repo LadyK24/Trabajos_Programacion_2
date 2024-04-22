@@ -21,7 +21,7 @@ caracteristicas=dbc.Container([
 
     html.H5('Diametro'),
     dcc.Input(type='number', value=5, id="edad"),
-    html.Br(),html.Br(),
+    html.Br(),
     html.H5('Altura'),
     dcc.Input(type='number', value=5, id="edad")
 ])
