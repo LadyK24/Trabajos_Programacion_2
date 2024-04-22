@@ -31,10 +31,8 @@ parametros=dbc.Container([
     html.H4("Parámetros del suelo",style={'text-align': 'center'}),
     html.Br(),
 
-    html.Div([
-        html.Label('Cohesión máxima:', style={'display': 'inline-block', 'margin-right': '10px'}),
-        dcc.Input(type='number', value=5, id="Cohesión máxima",step=0.1)
-    ]),
+    html.Button('Cohesión máxima'),
+    
     html.Br(),html.Br(),
 
     html.Button('Cohesión residual'),
