@@ -1,5 +1,5 @@
 import dash 
-from dash import html
+from dash import html, dcc 
 import dash_bootstrap_components as dbc
 
 resultados=dbc.Container([
@@ -12,6 +12,11 @@ parametros=dbc.Container([
     html.H1("Parámetros del suelo"),
     html.Br(),html.Br(),
     html.Button('Cohesión máxima'),
+
+    html.Div([
+        html.Label('Cohesión máxima:', style={'display': 'inline-block', 'margin-right': '10px'}),
+        dcc.Input(type='number', value=5, id="Cohesión máxima")
+    ]),
     html.Br(),html.Br(),
     html.Button('Cohesión residual'),
     html.Br(),html.Br(),
