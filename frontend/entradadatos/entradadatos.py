@@ -40,7 +40,7 @@ Datos_de_corte=dbc.Container([
 
 
 tabla_datos=dbc.Container([
-    html.H1("Realización de tablas"),
+    html.H6("Tabla deformación, fuerzas y esfuerzo",style={'text-align': 'center'}),
     dash_table.DataTable(
         id='tabla_granulometria',
         columns=[
