@@ -12,6 +12,13 @@ ingresodatos=dbc.Container([
 
 caracteristicas=dbc.Container([
     html.H5("Características de la muestra:"),
+    
+    html.Div([
+        html.Label('Diametro (m):   '),
+        html.Label('__________',style={'color':'green'}),
+        dcc.Input(type='number', value=5, id="Diametro (m)")
+    ]),
+
     html.H5('Diametro'),
     dcc.Input(type='number', value=5, id="edad"),
     html.Br(),html.Br(),
