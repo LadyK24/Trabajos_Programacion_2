@@ -28,8 +28,7 @@ esfuerzos_tabla=dbc.Container([
 
 parametros=dbc.Container([
     html.H2("Parámetros del suelo"),
-    html.Br(),html.Br(),
-    html.Button('Cohesión máxima'),
+    html.Br(),
 
     html.Div([
         html.Label('Cohesión máxima:', style={'display': 'inline-block', 'margin-right': '10px'}),
@@ -44,7 +43,7 @@ parametros=dbc.Container([
     html.Button('Fricción máxima'),
 
     html.Br(),html.Br(),
-    
+
     html.Button('Fricción residual')
 ])
 
