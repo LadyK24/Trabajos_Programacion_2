@@ -7,31 +7,35 @@ from backend1.cortedirecto import cortedirecto
 
 
 ingresodatos=dbc.Container([
-    html.H5("¡Ingrese los datos de las muestras!"),
+    html.H5("¡Ingrese los datos de las muestras!",style={'text-align': 'center'}),
 ])
 
 caracteristicas=dbc.Container([
-    html.H5("Características de la muestra:"),
+    html.H6("Características de la muestra:"),
     
     html.Div([
-        html.Label('Diametro (m):', style={'display': 'inline-block', 'margin-right': '2px'}),
-        dcc.Input(type='number', value=8, id="Diametro (m)")
+        html.Label('Diametro (cm):', style={'display': 'inline-block', 'margin-right': '2px'}),
+        dcc.Input(type='number', value=8, id="Diametro (cm)",step=0.1),       
     ]),
 
-    html.H5('Diametro'),
-    dcc.Input(type='number', value=5, id="edad"),
-    html.Br(),
-    html.H5('Altura'),
-    dcc.Input(type='number', value=5, id="edad")
+    html.Div([
+        html.Label('Altura (cm):', style={'display': 'inline-block', 'margin-right': '2px'}),
+        dcc.Input(type='number', value=8, id="Altura (cm):",step=0.1),       
+    ]),
 ])
 
 Datos_de_corte=dbc.Container([
-    html.H5("Datos de corte:"),
+    html.H6("Datos de corte:"),
+    html.Div([
+        html.Label('Sobre carga (g):', style={'display': 'inline-block', 'margin-right': '2px'}),
+        dcc.Input(type='number', value=8, id="Sobre carga (g)",step=0.1),       
+    ]),
+
+    html.Div([
+        html.Label('Carga normal(kg):', style={'display': 'inline-block', 'margin-right': '2px'}),
+        dcc.Input(type='number', value=8, id="Carga normal (kg):",step=0.1),       
+    ]),
     html.Br(),
-    html.H5('Sobre carga'),
-    dcc.Input(type='number', value=5, id="edad"),
-    html.H5('Carga nominal'),
-    dcc.Input(type='number', value=5, id="edad")
 ])
 
 
@@ -56,9 +60,9 @@ tabla_datos=dbc.Container([
 
 entrada_datos = dbc.Container([
     dbc.Row([
-        dbc.Col(ingresodatos,md=12,style={'background-color':'yellow'}), 
-        dbc.Col(caracteristicas,md=6,style={'background-color':'orange'}),
-        dbc.Col(Datos_de_corte,md=6,style={'background-color':'gray'}),
+        dbc.Col(ingresodatos,md=12,style={'background-color':'orange'}), 
+        dbc.Col(caracteristicas,md=6,style={'background-color':'grayligh'}),
+        dbc.Col(Datos_de_corte,md=6,style={'background-color':'grayligh'}),
         dbc.Col(tabla_datos,md=12,style={'background-color':'green'}),
 
     ])
