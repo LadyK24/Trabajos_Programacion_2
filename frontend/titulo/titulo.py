@@ -13,8 +13,8 @@ subt = dbc.Container([
 ])
 titulo = dbc.Container([
     dbc.Row([
-        dbc.Col(corte_directo,md=12,style={'background-color':'orange'}),
-        dbc.Col(subt,md=12,style={'background-color':'orange'}),
+        dbc.Col(corte_directo,md=12,style={'background-color':'gray'}),
+        dbc.Col(subt,md=12,style={'background-color':'gray'}),
         html.Br(),html.Br()
     ])
 ])

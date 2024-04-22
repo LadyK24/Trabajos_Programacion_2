@@ -60,10 +60,10 @@ tabla_datos=dbc.Container([
 
 entrada_datos = dbc.Container([
     dbc.Row([
-        dbc.Col(ingresodatos,md=12,style={'background-color':'orange'}), 
-        dbc.Col(caracteristicas,md=6,style={'background-color':'grayligh'}),
-        dbc.Col(Datos_de_corte,md=6,style={'background-color':'grayligh'}),
-        dbc.Col(tabla_datos,md=12,style={'background-color':'green'}),
+        dbc.Col(ingresodatos,md=12,style={'background-color':'gray'}), 
+        dbc.Col(caracteristicas,md=6,style={'background-color':'#DCDCDC'}),
+        dbc.Col(Datos_de_corte,md=6,style={'background-color':'#DCDCDC'}),
+        dbc.Col(tabla_datos,md=12,style={'background-color':'#DCDCDC'}),
 
     ])
 ])

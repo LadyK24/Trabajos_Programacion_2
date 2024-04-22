@@ -9,7 +9,7 @@ ensayo=dbc.Container([
 
 descripcion = dbc.Container([
     dbc.Row([
-        dbc.Col(ensayo,md=12,style={'background-color':'white'},)
+        dbc.Col(ensayo,md=12,style={'background-color':'#DCDCDC'},)
         
     ])
 ])

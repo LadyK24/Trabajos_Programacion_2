@@ -3,8 +3,7 @@ from dash import html, dcc
 import dash_bootstrap_components as dbc
 
 resultados=dbc.Container([
-    html.H2("Curvas - Deformación horizontal"),
-    html.Br(),html.Br(),
+    html.H5("Curvas - Deformación horizontal", style={'text-align': 'center'}),
 ])
 
 
@@ -30,8 +29,9 @@ parametros=dbc.Container([
 
 salida_datos = dbc.Container([
     dbc.Row([
-        dbc.Col(resultados,md=12,style={'background-color':'yellow'}), 
-        dbc.Col('Gráfica',md=12,style={'background-color':'gray'}),
+        dbc.Col(resultados,md=12,style={'background-color':'gray'}), 
+        dbc.Col('Gráfica',md=12,style={'background-color':'#DCDCDC'}),
+        html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),    
         dbc.Col('Esfuerzos normales y',md=6,style={'background-color':'green'}),
         dbc.Col('Gráfica',md=6,style={'background-color':'pink'}),
         dbc.Col(parametros,md=12,style={'background-color':'purple'}),
