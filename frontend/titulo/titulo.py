@@ -3,13 +3,13 @@ from dash import html
 import dash_bootstrap_components as dbc
 
 corte_directo = dbc.Container([
-    html.H1("ENSAYO CORTE DIRECTO"),
+    html.H1("ENSAYO CORTE DIRECTO",style={'text-align': 'center'})
     
 
 
 ])
 subt = dbc.Container([
-    html.H1("INV E 154 - 13")
+    html.H1("INV E 154 - 13",style={'text-align': 'center'})
 ])
 titulo = dbc.Container([
     dbc.Row([
