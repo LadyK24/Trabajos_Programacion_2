@@ -14,9 +14,9 @@ caracteristicas=dbc.Container([
     html.H5("Características de la muestra:"),
     
     html.Div([
-        html.Label('Diametro (m):   '),
+        html.Label('Diametro (cm):'),
         html.Label('__________',style={'color':'green'}),
-        dcc.Input(type='number', value=5, id="Diametro (m)")
+        dcc.Input(id='Diametro (cm):',  value=5, type='number', step=0.1),
     ]),
 
     html.H5('Diametro'),
@@ -57,9 +57,9 @@ tabla_datos=dbc.Container([
 
 entrada_datos = dbc.Container([
     dbc.Row([
-        dbc.Col(ingresodatos,md=12,style={'background-color':'yellow'}), 
-        dbc.Col(caracteristicas,md=6,style={'background-color':'orange'}),
-        dbc.Col(Datos_de_corte,md=6,style={'background-color':'gray'}),
+        dbc.Col(ingresodatos,md=12,style={'background-color':'orange'}), 
+        dbc.Col(caracteristicas,md=6,style={'background-color':'grayligh'}),
+        dbc.Col(Datos_de_corte,md=6,style={'background-color':'grayligh'}),
         dbc.Col(tabla_datos,md=12,style={'background-color':'green'}),
 
     ])

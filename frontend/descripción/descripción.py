@@ -3,7 +3,7 @@ from dash import html
 import dash_bootstrap_components as dbc
 
 ensayo=dbc.Container([
-    html.H3("Descripción: Determinar la resitencia al corte de una muetra de suelo consolidado y drenado...")
+    html.H5("Descripción: Determinar la resitencia al corte de una muetra de suelo consolidado y drenado...")
 
 ])
 
