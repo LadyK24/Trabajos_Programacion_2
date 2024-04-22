@@ -7,24 +7,25 @@ from backend1.cortedirecto import cortedirecto
 
 
 ingresodatos=dbc.Container([
-    html.H4("Características de la muestra"),
-    html.Br(),
+    html.H5("¡Ingrese los datos de las muestras!"),
 ])
 
 caracteristicas=dbc.Container([
-    html.H3("Características de la muestra"),
+    html.H5("Características de la muestra:"),
+    html.H5('Diametro'),
+    dcc.Input(type='number', value=5, id="edad"),
     html.Br(),html.Br(),
-    html.Button('Diametro'),
-    html.Br(),html.Br(),
-    html.Button('Altura')
+    html.H5('Altura'),
+    dcc.Input(type='number', value=5, id="edad")
 ])
 
 Datos_de_corte=dbc.Container([
-    html.H3("Datos de corte"),
-    html.Br(),html.Br(),
-    html.Button('Sobre carga'),
-    html.Br(),html.Br(),
-    html.Button('Carga nominal')
+    html.H5("Datos de corte:"),
+    html.Br(),
+    html.H5('Sobre carga'),
+    dcc.Input(type='number', value=5, id="edad"),
+    html.H5('Carga nominal'),
+    dcc.Input(type='number', value=5, id="edad")
 ])
 
 
