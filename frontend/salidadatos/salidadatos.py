@@ -27,7 +27,7 @@ esfuerzos_tabla=dbc.Container([
 ])
 
 parametros=dbc.Container([
-    html.H1("Parámetros del suelo"),
+    html.H2("Parámetros del suelo"),
     html.Br(),html.Br(),
     html.Button('Cohesión máxima'),
 
@@ -51,9 +51,9 @@ salida_datos = dbc.Container([
         dbc.Col(resultados,md=12,style={'background-color':'gray'}), 
         dbc.Col('Gráfica',md=12,style={'background-color':'#DCDCDC'}),
         html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),    
-        dbc.Col(esfuerzos_tabla,md=6,style={'background-color':'green'}),
+        dbc.Col(esfuerzos_tabla,md=6,style={'background-color':'#DCDCDC'}),
         html.Br(),html.Br(),html.Br(),
-        dbc.Col('Gráfica',md=6,style={'background-color':'pink'}),
+        dbc.Col('Gráfica',md=6,style={'background-color':'#DCDCDC'}),
         dbc.Col(parametros,md=12,style={'background-color':'purple'}),
 
     ])
