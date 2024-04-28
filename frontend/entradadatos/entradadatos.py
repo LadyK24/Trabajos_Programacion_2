@@ -41,6 +41,7 @@ Datos_de_corte=dbc.Container([
     html.Br(),
 ])
 
+# Tabla de datos
 
 tabla_datos=dbc.Container([
     html.H6("Tabla deformación, fuerzas y esfuerzo",style={'text-align': 'center'}),
