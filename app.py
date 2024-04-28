@@ -16,6 +16,42 @@ app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
 app.layout = layout
 
 
+# Definiión del diámetro
+
+@app.callback(
+    Output('salidaarea', 'children'),
+    Input('Diametro','value'),
+)
+
+
+def area(Diametro):
+    calculoarea = Diametro **2 
+    return 'area:' +str(calculoarea)
+
+
+# Definición de la tabla 
+
+@app.callback(
+    Output('tabla_cortedirecto', 'data'),
+    Input('tabla_cortedirecto', 'data'),
+    Input('tabla_cortedirecto', 'columns')
+)
+
+def update_cortedirecto_table(rows,columns):
+    cortedirecto=pd.DataFrame(rows)
+
+    cortedirecto['Fuerza1'] = cortedirecto['Fuerza1'].astype("int")
+    cortedirecto['Fuerza2'] = cortedirecto['Fuerza2'].astype("int")
+    cortedirecto['Fuerza3'] = cortedirecto['Fuerza3'].astype("int")
+
+    cortedirecto["Esfuerzo1"]=round((cortedirecto["Fuerza1"]/9.81)/(36 /(1-((cortedirecto["Deformacion"]/100)/(2*10)))),2)
+    cortedirecto["Esfuerzo2"]=round((cortedirecto["Fuerza2"]/9.81)/(36 /(1-((cortedirecto["Deformacion"]/100)/(2*10)))),2)
+    cortedirecto["Esfuerzo3"]=round((cortedirecto["Fuerza3"]/9.81)/(36 /(1-((cortedirecto["Deformacion"]/100)/(2*10)))),2)
+    
+    return cortedirecto.to_dict('records')
+
+
+
 if __name__ == '__main__':
     app.run_server(debug=True)
         

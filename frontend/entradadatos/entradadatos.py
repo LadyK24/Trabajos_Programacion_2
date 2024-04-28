@@ -16,7 +16,8 @@ caracteristicas=dbc.Container([
     
     html.Div([
         html.Label('Diametro (cm):', style={'display': 'inline-block', 'margin-right': '2px'}),
-        dcc.Input(type='number', value=8, id="Diametro (cm)",step=0.1),       
+        dcc.Input(type='number', value=6, id="Diametro",step=0.1),
+        html.Label(id='salidaarea'),       
     ]),
 
     html.Div([
@@ -51,7 +52,7 @@ tabla_datos=dbc.Container([
             {'name': 'Fuerza2', 'id': 'Fuerza2', 'editable': True},
             {'name': 'Fuerza3', 'id': 'Fuerza3', 'editable': True},
             {'name': 'Esfuerzo1', 'id': 'Esfuerzo1', 'editable': False},
-            {'name': 'Esfuerzo2', 'id': 'Esferzo2', 'editable': False},
+            {'name': 'Esfuerzo2', 'id': 'Esfuerzo2', 'editable': False},
             {'name': 'Esfuerzo3', 'id': 'Esfuerzo3', 'editable': False}
             ],
 
