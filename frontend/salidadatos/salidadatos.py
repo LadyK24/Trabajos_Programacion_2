@@ -33,13 +33,6 @@ parametros=dbc.Container([
 
 
     html.Button('Cohesión máxima'),
-
-
-    html.Div([
-        html.Label('Cohesión máxima:', style={'display': 'inline-block', 'margin-right': '10px'}),
-        dcc.Input(type='number', value=5, id="Cohesión máxima",step=0.1)
-    ]),
-
     html.Br(),html.Br(),
     html.Button('Cohesión residual'),
     html.Br(),html.Br(),
