@@ -10,6 +10,11 @@ resultados=dbc.Container([
 ])
 
 
+grafica=dbc.Container([
+    html.H6("Curva "),
+    dcc.Graph(id="cortedirecto_plot")
+])
+
 
 esfuerzos_tabla=dbc.Container([
     html.H5("Resultados de los esfuerzo de las muestras"),
@@ -47,7 +52,7 @@ parametros=dbc.Container([
 salida_datos = dbc.Container([
     dbc.Row([
         dbc.Col(resultados,md=12,style={'background-color':'gray'}), 
-        dbc.Col('Gráfica',md=12,style={'background-color':'#DCDCDC'}),
+        dbc.Col(grafica,md=12,style={'background-color':'#DCDCDC'}),
         html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),    
         dbc.Col(esfuerzos_tabla,md=6,style={'background-color':'#DCDCDC'}),
         html.Br(),html.Br(),html.Br(),

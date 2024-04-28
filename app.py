@@ -51,6 +51,60 @@ def update_cortedirecto_table(rows,columns):
     return cortedirecto.to_dict('records')
 
 
+# Definición de la grafica 
+
+@app.callback(
+    Output('cortedirecto_plot','figure'),
+    Input('tabla_cortedirecto','data')
+)
+
+
+
+
+def update_cortedirecto_plot(rows):
+    
+    cortedirecto = pd.DataFrame(rows)
+
+    trace1 = go.Scatter(
+        x=cortedirecto["Deformacion"],
+        y=cortedirecto["Esfuerzo1"],
+        mode='lines',
+        name='Esfuerzo 1',
+        line=dict(color='blue'),
+    )
+
+    trace2 = go.Scatter(
+        x=cortedirecto["Deformacion"],
+        y=cortedirecto["Esfuerzo2"],
+        mode='lines',
+        name='Esfuerzo 2',
+        line=dict(color='red'),
+    )
+
+    trace3 = go.Scatter(
+        x=cortedirecto["Deformacion"],
+        y=cortedirecto["Esfuerzo3"],
+        mode='lines',
+        name='Esfuerzo 3',
+        line=dict(color='green'),
+    )
+
+    fig = go.Figure(data=[trace1, trace2, trace3])
+
+    fig.update_layout(
+        title={
+            'text': 'Esfuerzo vs deformación',
+            'x':0.5,  # Centrar horizontalmente
+            'y':0.9,  # Ajustar la posición vertical si es necesario
+            'xanchor': 'center',
+            'yanchor': 'top'
+        },
+        xaxis_title='Deformación horizontal (mm)',
+        yaxis_title='Esfuerzo cortante (kg/cm2)'
+    )
+
+    return fig 
+
 
 if __name__ == '__main__':
     app.run_server(debug=True)
