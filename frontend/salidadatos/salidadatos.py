@@ -6,20 +6,22 @@ import pandas as pd
 from backend1.esfuerzos import esfuerzos
 
 resultados=dbc.Container([
-    html.H5("Curvas - Deformación horizontal", style={'text-align': 'center'}),
+    html.H5("Resultados", style={'text-align': 'center'}),
 ])
 
 
 grafica=dbc.Container([
-    html.H6("Curva "),
+    html.Br(),
+    html.H5("Curva Deformación horizontal - Esfuerzo cortante", style={'text-align': 'center'}),
     dcc.Graph(id="cortedirecto_plot")
 ])
 
 
 esfuerzos_tabla=dbc.Container([
-    html.H5("Resultados de los esfuerzo de las muestras"),
+    html.Br(),html.Br(), # AGREGAR ESPACIO
+    html.H5("Resultados de los esfuerzos de las muestras", style={'text-align': 'center'}),
     dash_table.DataTable(
-        id='esfuerzos_tabla',
+        id='esfuerzos_tabla_dataframe',
         columns=[
             {'name': 'Muestra', 'id': 'Muestra','editable': False},
             {'name': 'Normal', 'id': 'Normal','editable': False},
@@ -29,6 +31,14 @@ esfuerzos_tabla=dbc.Container([
 
         data=esfuerzos.to_dict('records')           
     ),
+])
+
+html.Br(),
+
+grafica2=dbc.Container([
+    html.Br(),html.Br(),
+    html.H5("Curva  Esfuerzo Normal - Esfuerzo Cortante", style={'text-align': 'center'}),
+    dcc.Graph(id="Esfuerzos_plot")
 ])
 
 parametros=dbc.Container([
@@ -52,12 +62,11 @@ parametros=dbc.Container([
 salida_datos = dbc.Container([
     dbc.Row([
         dbc.Col(resultados,md=12,style={'background-color':'gray'}), 
-        dbc.Col(grafica,md=12,style={'background-color':'#DCDCDC'}),
-        html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),    
-        dbc.Col(esfuerzos_tabla,md=6,style={'background-color':'#DCDCDC'}),
+        dbc.Col(grafica,md=12,style={'background-color':'#DCDCDC'}),  
+        dbc.Col(esfuerzos_tabla,md=12,style={'background-color':'#DCDCDC'}),
         html.Br(),html.Br(),html.Br(),
-        dbc.Col('Gráfica',md=6,style={'background-color':'#DCDCDC'}),
-        dbc.Col(parametros,md=12,style={'background-color':'#DCDCDC'}),
+        dbc.Col(grafica2,md=12,style={'background-color':'#DCDCDC'}),
+        html.Br(),
 
 
     ])

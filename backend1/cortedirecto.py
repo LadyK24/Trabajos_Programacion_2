@@ -139,7 +139,7 @@ Muestra3=[
     379.91
 ]
 
-cortedirecto= pd.DataFrame({ 
+cortedirecto1= pd.DataFrame({ 
     "Deformacion": Deformacion,
     "Fuerza1": Muestra1, 
     "Fuerza2": Muestra2,
@@ -147,6 +147,6 @@ cortedirecto= pd.DataFrame({
 })
 
 
-cortedirecto["Esfuerzo1"]=round((cortedirecto["Fuerza1"]/9.81)/(36 /(1-((cortedirecto["Deformacion"]/100)/(2*10)))),2)
-cortedirecto["Esfuerzo2"]=round((cortedirecto["Fuerza2"]/9.81)/(36 /(1-((cortedirecto["Deformacion"]/100)/(2*10)))),2)
-cortedirecto["Esfuerzo3"]=round((cortedirecto["Fuerza3"]/9.81)/(36 /(1-((cortedirecto["Deformacion"]/100)/(2*10)))),2)
+cortedirecto1["Esfuerzo1"]=round((cortedirecto1["Fuerza1"]/9.81)/(36 /(1-((cortedirecto1["Deformacion"]/100)/(2*10)))),2)
+cortedirecto1["Esfuerzo2"]=round((cortedirecto1["Fuerza2"]/9.81)/(36 /(1-((cortedirecto1["Deformacion"]/100)/(2*10)))),2)
+cortedirecto1["Esfuerzo3"]=round((cortedirecto1["Fuerza3"]/9.81)/(36 /(1-((cortedirecto1["Deformacion"]/100)/(2*10)))),2)

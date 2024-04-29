@@ -1,4 +1,8 @@
 import pandas as pd
+import math
+
+
+#Dataframe esfuerzos
 
 Muestra=[
     1,
@@ -6,26 +10,13 @@ Muestra=[
     3
 ]
 
-Normal=[
-    1,
-    2,
-    3
-]
 
-Cortante=[
-    1,
-    2,
-    3
-]
 
-Residual=[
-    1,
-    2,
-    3
-]
 esfuerzos= pd.DataFrame({ 
     "Muestra": Muestra,
-    "Normal": Normal, 
-    "Cortante": Cortante,
-    "Residual": Residual, 
+    "Normal": ["","",""],
+    "Cortante": ["","",""] ,
+    "Residual": ["","",""],  
 })
+
+    
