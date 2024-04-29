@@ -44,7 +44,7 @@ def update_cortedirecto_table(rows,columns,Diametro,Altura):
 
 # Definición de la grafica 
 
-@app.callback( #Para los Input y Output
+@app.callback(
     Output('cortedirecto_plot','figure'),
     Input('tabla_cortedirecto','data')
 )
@@ -212,4 +212,3 @@ if __name__ == '__main__':
 
 
 app = dash.Dash(__name__external_stylesheets=[dbc.themes.BOOTSTRAP])
-

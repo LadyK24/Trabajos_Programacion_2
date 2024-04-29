@@ -19,4 +19,4 @@ esfuerzos= pd.DataFrame({
     "Residual": ["","",""],  
 })
 
-    
+      

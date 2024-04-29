@@ -11,6 +11,7 @@ ingresodatos=dbc.Container([
 ])
 
 caracteristicas=dbc.Container([
+    html.Br(),
     html.H6("Características de la muestra:"),
     
     html.Div([
@@ -21,11 +22,12 @@ caracteristicas=dbc.Container([
 
     html.Div([
         html.Label('Altura (cm):', style={'display': 'inline-block', 'margin-right': '2px'}),
-        dcc.Input(type='number', value=2, id="Altura",step=0.1),       
+        dcc.Input(type='number', value=2, id="Altura",step=0.1),    #OJO COMO ESTABAN LLAMANDO EL ID!!!! BUENAS PRÁCTICAS DEFINIR VARIABLE   
     ]),
 ])
 
 Datos_de_corte=dbc.Container([
+    html.Br(),
     html.H6("Datos de corte:"),
     html.Div([
         html.Label('Sobre carga (g):', style={'display': 'inline-block', 'margin-right': '2px'}),
@@ -53,14 +55,10 @@ Datos_de_corte=dbc.Container([
 # Tabla de datos
 
 tabla_datos=dbc.Container([
-
     html.H5("Tabla deformación, fuerzas y esfuerzos",style={'text-align': 'center'}),
     html.H6("Deformación (mm)"),
     html.H6("Fuerzas (N)"),
     html.H6("Esfuerzos (kg/cm2)"),
-
-    html.H1("Realización de tablas"),
-
     dash_table.DataTable(
         id='tabla_cortedirecto',
         columns=[
