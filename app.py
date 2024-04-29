@@ -44,7 +44,7 @@ def update_cortedirecto_table(rows,columns,Diametro,Altura):
 
 # Definición de la grafica 
 
-@app.callback(
+@app.callback( #Para los Input y Output
     Output('cortedirecto_plot','figure'),
     Input('tabla_cortedirecto','data')
 )
