@@ -26,15 +26,31 @@ esfuerzos_tabla=dbc.Container([
     ),
 ])
 
+<<<<<<< HEAD
 parametros=dbc.Container([
     html.H1("Parámetros del suelo"),
+=======
+html.Br(),
+
+grafica2=dbc.Container([
+>>>>>>> a6764733d9add19721f0dcdfea2961125b00fa6a
     html.Br(),html.Br(),
     html.Button('Cohesión máxima'),
 
+<<<<<<< HEAD
     html.Div([
         html.Label('Cohesión máxima:', style={'display': 'inline-block', 'margin-right': '10px'}),
         dcc.Input(type='number', value=5, id="Cohesión máxima")
     ]),
+=======
+parametros=dbc.Container([
+    html.Br(),
+    html.H4("Parámetros del suelo",style={'text-align': 'center'}),
+    html.Br(),
+
+
+    html.Button('Cohesión máxima'),
+>>>>>>> a6764733d9add19721f0dcdfea2961125b00fa6a
     html.Br(),html.Br(),
     html.Button('Cohesión residual'),
     html.Br(),html.Br(),
@@ -49,12 +65,21 @@ parametros=dbc.Container([
 salida_datos = dbc.Container([
     dbc.Row([
         dbc.Col(resultados,md=12,style={'background-color':'gray'}), 
+<<<<<<< HEAD
         dbc.Col('Gráfica',md=12,style={'background-color':'#DCDCDC'}),
         html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),    
         dbc.Col(esfuerzos_tabla,md=6,style={'background-color':'green'}),
         html.Br(),html.Br(),html.Br(),
         dbc.Col('Gráfica',md=6,style={'background-color':'pink'}),
         dbc.Col(parametros,md=12,style={'background-color':'purple'}),
+=======
+        dbc.Col(grafica,md=12,style={'background-color':'#DCDCDC'}),  
+        dbc.Col(esfuerzos_tabla,md=12,style={'background-color':'#DCDCDC'}),
+        html.Br(),html.Br(),html.Br(),
+        dbc.Col(grafica2,md=12,style={'background-color':'#DCDCDC'}),
+        html.Br(),
+
+>>>>>>> a6764733d9add19721f0dcdfea2961125b00fa6a
 
     ])
 ])
