@@ -108,7 +108,7 @@ def update_cortedirecto_plot(rows):
     Input('Relacioncarga3','value'),
     Input('tabla_cortedirecto', 'data'),
     Input('tabla_cortedirecto', 'columns'),
-    Input('Altura','value'),#AGREGUÉ ALTURA
+    Input('Altura','value'),
 )
 
 def update_esfuerzos_table(Diametro, Sobrecarga,  Relacioncarga1, Relacioncarga2, Relacioncarga3,rows,columns,Altura):
