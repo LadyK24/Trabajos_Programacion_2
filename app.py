@@ -21,8 +21,8 @@ app.layout = layout
     Output('tabla_cortedirecto', 'data'),
     Input('tabla_cortedirecto', 'data'),
     Input('tabla_cortedirecto', 'columns'),
-    Input('Diametro','value'),
-    Input('Altura','value'),
+    Input('Diametro','value'),#AGREGUÉ DIÁMETRO
+    Input('Altura','value'),#AGREGUÉ ALTURA
     
 )
 
@@ -108,7 +108,7 @@ def update_cortedirecto_plot(rows):
     Input('Relacioncarga3','value'),
     Input('tabla_cortedirecto', 'data'),
     Input('tabla_cortedirecto', 'columns'),
-    Input('Altura','value'),
+    Input('Altura','value'),#AGREGUÉ ALTURA
 )
 
 def update_esfuerzos_table(Diametro, Sobrecarga,  Relacioncarga1, Relacioncarga2, Relacioncarga3,rows,columns,Altura):
@@ -212,3 +212,4 @@ if __name__ == '__main__':
 
 
 app = dash.Dash(__name__external_stylesheets=[dbc.themes.BOOTSTRAP])
+
