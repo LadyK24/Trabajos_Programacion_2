@@ -10,7 +10,7 @@ import math
 from frontend.frontend import layout
 
 
-app = Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
+app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
 server = app.server
 
 app.layout = layout
@@ -212,4 +212,4 @@ if __name__ == '__main__':
         
 
 
-app = dash.Dash(__name__external_stylesheets=[dbc.themes.BOOTSTRAP])
+
